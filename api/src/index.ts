@@ -20,3 +20,4 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`node-server running on port ${PORT}`);
 });
 
+console.log('hello from docker--love--69--lover');

@@ -1,0 +1,10 @@
+{
+  "triggerTaskOnSave.tasks": {
+    "restart_api": [
+      "api/src/**/*"
+    ]
+  },
+  "triggerTaskOnSave.on": true,
+  "triggerTaskOnSave.showNotifications": true,
+  "triggerTaskOnSave.selectedTask": "restart_api"
+}

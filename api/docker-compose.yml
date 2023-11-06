@@ -1,0 +1,26 @@
+# docker compose version
+version: "2"
+
+services:
+  # backend
+  api:
+    build: ./
+    image: api:1.0.0
+    container_name: api_box
+    ports:
+      # local:container
+      - 3000:8080
+      # debug port
+      - 9229:9229
+    volumes:
+      # map: local to container
+      - .:/usr/src/app
+      - ./usr/src/app/node_modules
+
+    # this overrides Dockerfile CMD
+    command: npm run start:docker
+
+    environment:
+      # this overrides any other port: like in Dockerfile
+      - PORT=8080
+  # database (postgress)
