@@ -11,7 +11,9 @@ app.use(morgan('dev'));
 
 // catch all route
 app.use('*', (req, res) => {
-  res.json({
+
+  console.log('go pro');
+  return res.json({
     msg: '404!',
   });
 });
@@ -20,4 +22,4 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`node-server running on port ${PORT}`);
 });
 
-console.log('hello from docker--love--69--lover');
+console.log('hello from docker--love--69--sexy');
